@@ -52,7 +52,8 @@
     --color-info: #1576D1;
 
     --text-huge: 70px;
-    --text-big: 65px;
+    --text-bigger: 65px;
+    --text-big: 50px;
     --text-medium: 24px;
     --text-small: 16px;
     --text-tiny: 14px;
@@ -98,17 +99,9 @@ section {
     align-items: center; 
 }
 
-#services{
-    background-color: var(--color-accent);
-}
-#trainings{
-    background-color: var(--color-info);
-}
-#plans{
-    background-color: var(--color-warning);
-}
-#about{
-    background-color: var(--color-danger);
+#slider{
+    width: 100vw;
+    height: 100;
 }
 
 .container {
@@ -131,6 +124,11 @@ h1{
         color: var(--color-accent);
         font-weight: var(--weight-bold);
     }
+}
+
+h2{
+    font-size: var(--text-big);
+    font-weight: var(--weight-bold);
 }
 
 p{
@@ -178,9 +176,7 @@ button{
     z-index: 1;
 }
 
-
 /* ---------------- */
-
 
 /* #hero {
     position: relative;
@@ -203,7 +199,6 @@ button{
     opacity: 0.3;
     z-index: -1; 
 } */
-
 
 /* Classes ----------------------------------- */
 
@@ -263,3 +258,43 @@ button{
     }
 }
 
+.slider-wrapper {
+    background-image: url(assets/images/slider1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70vw; 
+    height: 80vh; 
+
+    & .text-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & p {
+            width: 80%;
+            font-size: var(--text-huge);
+            line-height: 60px;
+            text-shadow: var(--text-shadow);
+            text-align: center;
+        }
+    }
+}
+
+.services-content-wrapper{
+    border: var(--border-outline);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    & h2{
+        width: 25ch;
+        text-align: right;
+        line-height: 50px;
+    
+    }
+}
